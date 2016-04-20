@@ -1,0 +1,7 @@
+name: Barrage
+main: moosecraft.Barrage
+version: 3.0
+commands:
+   barrage:
+      description: Upgrade your arsenal with a variety of specialty arrows
+      usage: "left click your bow to change arrow types"
