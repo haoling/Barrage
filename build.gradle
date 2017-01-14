@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    //mavenCentral()
+    maven {
+        name 'Spigot/Bukkit maven repo'
+        url 'http://maven.elmakers.com/repository'
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+        resources {
+            srcDir 'resources'
+        }
+    }
+}
+
+version = '3.0-1.11.2'
+group= 'net.moosecraft.barrage' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+
+dependencies {
+    compile "org.bukkit:bukkit:1.11.2-R0.1-SNAPSHOT"
+}
