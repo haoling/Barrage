@@ -1,5 +1,5 @@
 name: Barrage
-main: moosecraft.Barrage
+main: net.moosecraft.Barrage.Barrage
 version: 3.0
 commands:
    barrage:
