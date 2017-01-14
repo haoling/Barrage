@@ -106,7 +106,7 @@ public class Barrage extends JavaPlugin implements Listener {
     //this method checks if a player has enough materials to fire an arrow
     @SuppressWarnings("deprecation")
 	public Boolean invCheck(Player player, String cost, Boolean remove){
-        if(cost.equals(nocost)){
+        if(cost == null || cost.equals(nocost)){
             return Boolean.valueOf(true);
         }
         
@@ -310,7 +310,7 @@ public class Barrage extends JavaPlugin implements Listener {
             if(entCount == 0 && arrowType != ArrowType.Arrow)
             {
                 ArrowEffect arrowEffect = null;
-                String className = (new StringBuilder("moosecraft.")).append(arrowType.toString()).append("ArrowEffect").toString();
+                String className = (new StringBuilder("net.moosecraft.Barrage.")).append(arrowType.toString()).append("ArrowEffect").toString();
                 try
                 {
                     arrowEffect = (ArrowEffect)Class.forName(className).newInstance();
@@ -428,7 +428,7 @@ public class Barrage extends JavaPlugin implements Listener {
                 {
                     event.setDamage(0);
                 }
-                String className = (new StringBuilder("moosecraft.")).append(arrowType.toString()).append("ArrowEffect").toString();
+                String className = (new StringBuilder("net.moosecraft.Barrage.")).append(arrowType.toString()).append("ArrowEffect").toString();
                 try
                 {
                     arrowEffect = (ArrowEffect)Class.forName(className).newInstance();
